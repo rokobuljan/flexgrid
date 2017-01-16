@@ -65,8 +65,9 @@ Other elements with `.cell` will expand to available width
 
 ##Scrollbar classes:    
 Those classes are useful if you want a layout's DIV to scroll it's content
+`
 .noscroll { overflow:hidden; }
 .scroll-auto { overflow: auto; }
 .scroll-x {overflow-x: auto; overflow-y: hidden; }
 .scroll-y {overflow-x: hidden; overflow-y: auto; }
-
+`
