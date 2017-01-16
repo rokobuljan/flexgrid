@@ -1,7 +1,10 @@
 *{
   box-sizing:border-box;
+  margin:0;
 }
-html,body {
+
+html,
+body {
   margin:0;
   height:100%;
   font:14px/1.4 Arial, sans-serif;
@@ -10,11 +13,9 @@ body.dev * {
   outline: 1px solid rgba(255,0,0,0.3);
   outline-offset: -1px;
 }
+
 img{
   max-width: 100%;
-}
-.bg{
-  background: rgba(255,0,0,0.2);
 }
 
 .row,
@@ -24,9 +25,10 @@ img{
 }
 .row{ flex-flow: row wrap; } 
 .col{ flex-flow: column wrap; }
-/* or use nowrap to prevent overflow and wrap next element to new line*/
-.fit{
-  flex: 1;
+
+/* or use nowrap to prevent overflow and wrap next element to new line */
+.grow{
+  flex: 1 0 auto;
   width: 100%;
   height: 100%;
 }
@@ -45,7 +47,7 @@ img{
 .cell-12{
   position: relative;
 }
-.cell    { flex:1; }
+.cell    { flex:1 0 auto; }
 .cell-1  { width:8.333%; }
 .cell-2  { width:16.666%; }
 .cell-3  { width:25%; }
@@ -64,11 +66,6 @@ img{
   align-items: center;
 }
 
-.self-center{
-  align-self: auto;
-  margin: 0 auto;
-}
-
 /* CLEAR */
 .clear:before,
 .clear:after{
@@ -79,13 +76,15 @@ img{
   clear: both;
 }
 
-/* PADDINGS */
-.padd-head { padding: 24px 16px 8px; }
-.padd      { padding: 16px; }
-.padd-foot { padding: 8px 16px 24px; }
-
 /* SCROLL */
 .noscroll { overflow:hidden; }
 .scroll-auto { overflow: auto; }
 .scroll-x {overflow-x: auto; overflow-y: hidden; }
 .scroll-y {overflow-x: hidden; overflow-y: auto; }
+
+/* PADDINGS */
+.padd-head { padding: 24px 16px 8px; }
+.padd      { padding: 16px; }
+.padd-foot { padding: 8px 16px 24px; }
+
+
