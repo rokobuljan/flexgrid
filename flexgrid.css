@@ -1,0 +1,98 @@
+/* FLEXGRID by Roko C. Buljan 
+   JSBin Demo: http://jsbin.com/lilusa/5/edit?html,css,output */
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+html,
+body{
+  height: 100%;
+}
+/* Prevent images to push on box width */
+img{
+  max-width: 100%;
+}
+
+/* DEV
+add this class to <body> to see your grid */
+body.dev * {
+  outline: 1px solid rgba(255,0,0,0.3);
+  outline-offset: -1px;
+}
+
+/* CONTAINER
+Set this class to a box for a centered page content */
+.container{
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+/* -ROW suffix
+To place inner boxes horizontally */
+[class^="box-row"],[class*=" box-row"],
+[class^="box-col"],[class*=" box-col"]{
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* -COL suffix
+To place inner boxes vertically */
+[class^="box-col"],[class*=" box-col"]{
+  flex-flow: column wrap;
+}
+
+/* -FIT suffix
+Add this suffix to any box class to expand the element */
+[class$="-fit"],[class*="-fit "]{
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+
+/* BOX and BOX- prefix
+ For positioning eventual inner absolute elements */
+[class^="box-"],[class*=" box-"]{
+  position: relative;
+}
+.box    { flex: 1; }
+.box-1  { width: 8.333%; }
+.box-2  { width: 16.666%; }
+.box-3  { width: 25%; }
+.box-4  { width: 33.333%; }
+.box-5  { width: 41.666%; }
+.box-6  { width: 50%; }
+.box-7  { width: 58.333%; }
+.box-8  { width: 66.666%; }
+.box-9  { width: 75%; }
+.box-10 { width: 83.333%; }
+.box-11 { width: 91.666%; }
+.box-12 { width: 100%; }
+
+
+
+/* OPTIONAL EXTRAS: */
+
+/* SCROLL
+Since box height is by default dictated by it's content */
+.scroll-h  { overflow: hidden; }
+.scroll-a  { overflow: auto; }
+.scroll-ah { overflow-x: auto; overflow-y: hidden; }
+.scroll-ha { overflow-x: hidden; overflow-y: auto; }
+
+/* PADDINGS
+Simple paddings for header, footer, content */
+.padd-h { padding: 24px 16px 8px; }
+.padd   { padding: 16px; }
+.padd-f { padding: 8px 16px 24px; }
+
+/* CLEAR 
+(hack by Nicolas Gallagher) a useful tool to clear floats
+on parents with floated children - if you need it */
+.clear:before,
+.clear:after{ content: " "; display: table; }
+.clear:after{ clear: both;}
+
+/* TYPOGRAPHY
+Because typography matters */
+body{ font: 14px/1.4 Arial, sans-serif; }
