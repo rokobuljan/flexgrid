@@ -2,7 +2,6 @@
   box-sizing:border-box;
   margin:0;
 }
-
 html,
 body {
   height:100%;
@@ -12,9 +11,13 @@ body.dev * {
   outline: 1px solid rgba(255,0,0,0.3);
   outline-offset: -1px;
 }
-
 img{
   max-width: 100%;
+}
+
+.container{
+  max-width: 1152px;
+  margin: 0 auto;
 }
 
 .row,
@@ -22,16 +25,14 @@ img{
   position: relative;
   display: flex;
 }
-.row{ flex-flow: row wrap; } 
+.row{ flex-flow: row wrap; }
 .col{ flex-flow: column wrap; }
 
-/* or use nowrap to prevent overflow and wrap next element to new line */
 .grow{
   flex: 1;
   width: 100%;
   height: 100%;
 }
-
 .cell-1,
 .cell-2,
 .cell-3,
