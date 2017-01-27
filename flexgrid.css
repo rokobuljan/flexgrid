@@ -50,10 +50,9 @@ Add this suffix to any box class to expand the element */
   height: 100%;
 }
 
-/* BOX and BOX- prefix
- For positioning eventual inner absolute elements */
+/* BOX and BOX- prefix */
 [class^="box-"],[class*=" box-"]{
-  position: relative;
+  position: relative;  /* For positioning eventual inner absolute elements  */
 }
 .box    { flex: 1; }
 .box-1  { width: 8.333%; }
