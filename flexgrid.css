@@ -23,7 +23,7 @@ body.dev * {
 /* CONTAINER
 Set this class to a box for a centered page content */
 .container{
-  max-width: 1152px;
+  width: 1152px;
   margin: 0 auto;
 }
 
